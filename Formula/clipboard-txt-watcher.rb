@@ -19,6 +19,34 @@ class ClipboardTxtWatcher < Formula
     error_log_path var/"log/clipboard-txt-watcher.log"
   end
 
+  def caveats
+    <<~EOS
+      The service watches ~/clipboard.txt by default.
+
+      To start the service:
+        brew services start clipboard-txt-watcher
+
+      To stop the service:
+        brew services stop clipboard-txt-watcher
+
+      To check service status:
+        brew services info clipboard-txt-watcher
+
+      To view logs:
+        tail -f #{var}/log/clipboard-txt-watcher.log
+
+      To use a custom config file instead, create:
+        ~/.config/clipboard-txt-watcher/config.toml
+
+      Example config:
+        watch_file = "/path/to/your/file.txt"
+        clipboard_backend = "darwin"
+
+      Then run manually:
+        clipboard-txt-watcher --config ~/.config/clipboard-txt-watcher/config.toml
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/clipboard-txt-watcher --version")
   end
