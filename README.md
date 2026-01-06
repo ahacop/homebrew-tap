@@ -29,7 +29,7 @@ brew "<formula>"
 
 | Formula | Description |
 |---------|-------------|
-| *coming soon* | |
+| `clipboard-txt-watcher` | Watch a text file and sync its contents to the system clipboard |
 
 ## Services
 
