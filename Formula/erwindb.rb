@@ -1,25 +1,19 @@
 class Erwindb < Formula
   desc "TUI for browsing Erwin Brandstetter's Stack Overflow Q&A"
   homepage "https://github.com/ahacop/erwindb"
-  version "0.9.3"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.3/erwindb-aarch64-apple-darwin.tar.xz"
-      sha256 "95d268c8a5996172286d452b4daf37fca62b1ce6eff643a45e5a260e89165d75"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.3/erwindb-x86_64-apple-darwin.tar.xz"
-      sha256 "3c72e21bd8fbd2571e244dd9b57d07668597911283a64ff8cca17d65726cbcb2"
-    end
+  version "0.9.7"
+  if OS.mac? && Hardware::CPU.arm?
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-aarch64-apple-darwin.tar.xz"
+      sha256 "ce01cbf63a62648301e16a7db138e814bd3691d79499c1647b31d1db4eadc1f5"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.3/erwindb-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c3481bdf24eefaeec7f5b7565034e78a7847d7046e4707c1f2b2c79a16368226"
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0277cf8e68f6853609fe6c08b955b1c51d0f0e0d558d5a3adf278792fba0b19f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.3/erwindb-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e63d836914b0d400efc7665cd91df906d072458cfcf86e398729a1c0a57b8d37"
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fb512a79b6fb1393443bf4871970d6768fade1d2f9e1cb1881975ab1451deea2"
     end
   end
   license "GPL-3.0-or-later"
@@ -27,7 +21,6 @@ class Erwindb < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
@@ -48,7 +41,6 @@ class Erwindb < Formula
 
   def install
     bin.install "erwindb" if OS.mac? && Hardware::CPU.arm?
-    bin.install "erwindb" if OS.mac? && Hardware::CPU.intel?
     bin.install "erwindb" if OS.linux? && Hardware::CPU.arm?
     bin.install "erwindb" if OS.linux? && Hardware::CPU.intel?
 
