@@ -30,6 +30,7 @@ brew "<formula>"
 | Formula | Description |
 |---------|-------------|
 | `clipboard-txt-watcher` | Watch a text file and sync its contents to the system clipboard |
+| `erwindb` | TUI for browsing Erwin Brandstetter's Stack Overflow Q&A |
 
 ## Services
 
