@@ -1,19 +1,19 @@
 class Erwindb < Formula
   desc "TUI for browsing Erwin Brandstetter's Stack Overflow Q&A"
   homepage "https://github.com/ahacop/erwindb"
-  version "0.9.7"
+  version "0.9.8"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-aarch64-apple-darwin.tar.xz"
-      sha256 "ce01cbf63a62648301e16a7db138e814bd3691d79499c1647b31d1db4eadc1f5"
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.8/erwindb-aarch64-apple-darwin.tar.xz"
+      sha256 "406a7dbf1b49df7ac5b8ec7da535b16c1c500ff68265e0f11266ae2515a1cf0c"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0277cf8e68f6853609fe6c08b955b1c51d0f0e0d558d5a3adf278792fba0b19f"
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.8/erwindb-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1cbb72577b9b189db0f0469246fec490df12471ac78e1c3ae2000cb59b496149"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ahacop/erwindb/releases/download/v0.9.7/erwindb-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fb512a79b6fb1393443bf4871970d6768fade1d2f9e1cb1881975ab1451deea2"
+      url "https://github.com/ahacop/erwindb/releases/download/v0.9.8/erwindb-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2198c469c1ad3dc63ba7010bf3c5cf093a571edc7d0e3e36c599c440cbcbcb4e"
     end
   end
   license "GPL-3.0-or-later"
