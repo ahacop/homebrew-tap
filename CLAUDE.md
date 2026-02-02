@@ -21,7 +21,7 @@ class ToolName < Formula
   desc "Short description"
   homepage "https://github.com/ahacop/tool-name"
   url "https://github.com/ahacop/tool-name/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "..." # curl -sL <url> | shasum -a 256
+  # sha256: curl -sL <url> | shasum -a 256
   license "MIT"
 
   def install
@@ -43,7 +43,7 @@ class ServiceName < Formula
   desc "Short description"
   homepage "https://github.com/ahacop/service-name"
   url "https://github.com/ahacop/service-name/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "..."
+  # sha256: curl -sL <url> | shasum -a 256
   license "MIT"
 
   def install
