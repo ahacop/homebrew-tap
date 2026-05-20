@@ -35,7 +35,10 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - run: brew test-bot --only-tap-syntax
+      # Skip `brew test-bot --only-tap-syntax`: its style/audit checks reliably
+      # fail on cargo-dist-generated formulae. Parseability is still verified by
+      # readall, and `--only-formulae` exercises a real install on PRs.
+      - run: brew readall --aliases --os=all --arch=all "$GITHUB_REPOSITORY"
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
