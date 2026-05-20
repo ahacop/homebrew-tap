@@ -1,19 +1,19 @@
 class AocCli < Formula
   desc "Advent of Code CLI"
   homepage "https://github.com/ahacop/aoc-cli"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ahacop/aoc-cli/releases/download/v0.2.0/aoc-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "7410b0e528f4c8b8af6bd8d882b7ca5e8c458da129578a3a3260dd0803018a32"
+    url "https://github.com/ahacop/aoc-cli/releases/download/v0.3.0/aoc-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "e2356412b85e3e45166014381fe2631037fc2d0ef1519c8e48a9f4d963de0898"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ahacop/aoc-cli/releases/download/v0.2.0/aoc-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0483b2831ea0967eaf2e866b7c1e3e2ca9c4d0c2f180c0fff41d7e43f2599460"
+      url "https://github.com/ahacop/aoc-cli/releases/download/v0.3.0/aoc-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "09a4b29d1d6add9cbea1d1be0ff1a6d4ea8a9fc244e91c402b2f62ef1c9cba2c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ahacop/aoc-cli/releases/download/v0.2.0/aoc-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5ccb1e78a8a113ae0e052b37821828ac7c6174cea8762535d015943e5aac2914"
+      url "https://github.com/ahacop/aoc-cli/releases/download/v0.3.0/aoc-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "796a7ea4c0354941239e08645fcea5ac9cbb760883a003e621b7ed28ae273d9f"
     end
   end
   license "GPL-3.0-or-later"
