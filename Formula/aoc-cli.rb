@@ -1,19 +1,19 @@
 class AocCli < Formula
   desc "Advent of Code CLI"
   homepage "https://github.com/ahacop/aoc-cli"
-  version "0.4.0"
+  version "0.5.1"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ahacop/aoc-cli/releases/download/v0.4.0/aoc-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "85fe3eb40ca34d9fccd0d361d5a5beb9aa868cf02e4a7bc54137686653881c7c"
+    url "https://github.com/ahacop/aoc-cli/releases/download/v0.5.1/aoc-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "c508c090809767728b8f4d08bed37596b1fc08c7ecffbe00861712a45fb39028"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ahacop/aoc-cli/releases/download/v0.4.0/aoc-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0b603a6be37203d8ef4f2e2c0d93346c03777242a7094e4b9f870d67f1cb875b"
+      url "https://github.com/ahacop/aoc-cli/releases/download/v0.5.1/aoc-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3b947eb5b84228cc05b83831b20df8b1ca08ad6d44209895aec327093961445e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ahacop/aoc-cli/releases/download/v0.4.0/aoc-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "789dc43012babb1019434e134aaf25a1464e16f2b1edd8e8b874e62dd24580ed"
+      url "https://github.com/ahacop/aoc-cli/releases/download/v0.5.1/aoc-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fd0c28b63bb767968b02bad8c084479fdd07b9003ed0ef3d01d4734845983d90"
     end
   end
   license "GPL-3.0-or-later"
@@ -40,9 +40,15 @@ class AocCli < Formula
   end
 
   def install
-    bin.install "aoc" if OS.mac? && Hardware::CPU.arm?
-    bin.install "aoc" if OS.linux? && Hardware::CPU.arm?
-    bin.install "aoc" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "aoc"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "aoc"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "aoc"
+    end
 
     install_binary_aliases!
 
