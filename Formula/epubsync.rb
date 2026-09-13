@@ -5,7 +5,7 @@ class Epubsync < Formula
   license "MIT"
 
   url "https://github.com/ahacop/epub-sync/releases/download/v#{version}/epubsync-#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "3f13845afebef7be3919c59c7a5523cb54829f12fa5899e64101af6065cb968e"
 
   depends_on arch: :arm64
   depends_on :macos
