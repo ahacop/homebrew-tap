@@ -1,8 +1,8 @@
 class Epubsync < Formula
   desc "Manage a KEPUB library and sync it to a Kobo"
   homepage "https://github.com/ahacop/epub-sync"
-  url "https://github.com/ahacop/epub-sync/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "5151882577d5e17f8ba52a9af7f18714ae8c5a268a387ab820356279325439b2"
+  url "https://github.com/ahacop/epub-sync/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "e35f815be155157f5ab6b7f75835f444e56a2e4cc180e5157201c428537c110c"
   license "MIT"
   head "https://github.com/ahacop/epub-sync.git", branch: "main"
 
