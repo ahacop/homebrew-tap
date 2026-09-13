@@ -31,6 +31,7 @@ brew "<formula>"
 |---------|-------------|
 | `clipboard-txt-watcher` | Watch a text file and sync its contents to the system clipboard |
 | `erwindb` | TUI for browsing Erwin Brandstetter's Stack Overflow Q&A |
+| `epubsync` | Manage a KEPUB library and sync it to a Kobo |
 
 ## Services
 
