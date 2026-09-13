@@ -2,7 +2,7 @@ class Epubsync < Formula
   desc "Manage a KEPUB library and sync it to a Kobo"
   homepage "https://github.com/ahacop/epub-sync"
   version "0.1.4"
-  license "MIT"
+  license "GPL-3.0-or-later"
 
   url "https://github.com/ahacop/epub-sync/releases/download/v#{version}/epubsync-#{version}-aarch64-apple-darwin.tar.gz"
   sha256 "3f13845afebef7be3919c59c7a5523cb54829f12fa5899e64101af6065cb968e"
