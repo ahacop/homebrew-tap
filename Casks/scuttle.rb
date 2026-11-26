@@ -1,6 +1,6 @@
 cask "scuttle" do
-  version "0.7"
-  sha256 "b9511ef3750491e7ef168418a94d5575bacbb3626f534d826cd7f095617332ba"
+  version "0.8"
+  sha256 "0e6ea558391ea02dc57c05bd1b8fa074733bbf694e1f9d41aaf3fe1aeea42c3f"
 
   url "https://github.com/ahacop/scuttle/releases/download/v#{version}/scuttle.app.zip"
   name "scuttle"
